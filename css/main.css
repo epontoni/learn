@@ -1,0 +1,38 @@
+@import './icons.css';
+@import './scrollbar.css';
+@import './menu.css';
+@import './app-content.css';
+@import './lesson.css';
+
+:root {
+    --black: #000000; 
+    --primary: #0f56b3;
+    --secondary: #BA3122;
+    --grey-bg: #fbfbfb;
+    --gray10: #f1f3f4;
+    --grey20: #D0CDCF;
+    --grey30: #787878; 
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, system-ui, sans-serif;
+}
+
+.app {
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "menu content";
+    height: 100vh;
+}
+
+@media (max-width: 768px) {
+    .app {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 4rem;
+        grid-template-areas:    "content"
+                                "menu";
+    }
+}

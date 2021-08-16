@@ -1,0 +1,30 @@
+.app-content {
+    grid-area: content;
+    /*background-color: var(--primary);*/
+    /*display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;*/
+}
+
+/*.app-content h1 {
+    color: wheat;
+    font-size: 3rem;
+}
+
+.app-content p {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.app-content p a {
+    color: var(--grey10);
+    text-decoration: none;
+}
+
+.app-content p a:hover {
+    color: var(--grey20);
+    text-decoration: underline;
+}*/

@@ -1,0 +1,172 @@
+/* Show path button */
+
+.show-path {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    min-height: 3rem; /**/
+}
+
+.show-path i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: .5rem;
+}
+
+.show-path i:hover {
+    transform: scale(.9);
+    color: var(--primary);
+}
+
+.show-path p {
+    margin: 0;
+    transition: display 1s ease, width 1s ease; /* why doesn't work ?*/
+    
+}
+
+.switchable.is-visible {
+    display: none;
+}
+
+.lesson-list {
+    /*border: 1px solid tomato;*/
+    max-height: calc(100vh - 8rem);
+    overflow-y: scroll;
+}
+
+/*.lesson-list::-webkit-scrollbar {
+    visibility: hidden;
+}*/
+
+/* Lesson Title */
+
+.lesson-title {
+    min-height: 3rem; /**/
+    display: flex;
+    align-items: center;
+}
+
+.lesson-title h2 {
+    font-size: 1rem;
+}
+
+/* Chapter/Section Title */
+
+/*<div class="chapter-title">
+    <div class="title-dotContainer">
+        <div class="title-dot"></div>
+    </div>
+    <h3>Bienvenida</h3>
+</div>*/
+
+.chapter-title {
+    display: flex;
+    flex-direction: row;
+    max-width: 12.5rem;
+    min-height: 3rem; /**/
+}
+
+.chapter-title h3 {
+    color: var(--primary);
+    font-size: .9rem;
+}
+
+.title-dotContainer {
+    min-width: 2rem;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    position: relative;
+    margin-right: .5rem;
+}
+
+.title-dotContainer::after {
+    content: "";
+    width: 2px;
+    background: var(--primary);
+    height: 50%;
+    position: absolute;
+    left: calc(50% - 1px);
+    bottom: 0;
+}
+
+.title-dot {
+    width: 1rem;
+    height: 1rem;
+    background: var(--primary);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/**/
+
+.lesson-chapterTitle {
+    display: flex;
+    flex-direction: row;
+    max-width: 12.5rem;
+    min-height: 3rem; /**/
+}
+
+a.lesson-chapterTitle {
+    text-decoration: none;
+}
+
+a.lesson-chapterTitle:hover {
+    background: var(--gray10);
+}
+
+.lesson-chapterTitle h4 {
+    font-size: .75rem;
+    color: var(--black);
+}
+
+.lesson-chapterTitle span {
+    color: var(--white);
+    font-size: .75rem;
+}
+.chapter-dotContainer {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    position: relative;
+    margin-right: .5rem;
+    min-width: 2rem;/**/
+}
+
+.chapter-dotContainer::after {
+    content: "";
+    width: 2px;
+    background: var(--primary);
+    height: 50%;
+    position: absolute;
+    left: calc(50% - 1px);
+    top: 0;
+}
+
+.chapter-dotContainer::before {
+    content: "";
+    width: 2px;
+    background: var(--primary);
+    height: 50%;
+    position: absolute;
+    left: calc(50% - 1px);
+    bottom: 0;
+}
+
+.chapter-dot {
+    width: 1.25rem;
+    height: 1.25rem;
+    background: var(--primary);
+    border-radius: 50%;
+    text-align: center;
+    z-index: 2;
+    border: 2px solid var(--black);
+}
+
+@media (max-width: 768px) {
+    .lesson-list {
+        max-height: calc(100vh - 11rem);
+    }
+}

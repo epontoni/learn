@@ -1,0 +1,19 @@
+@import "./lesson-roadmap.css";
+
+.lesson {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    height: 100%;
+    grid-template-areas: "lesson-content lesson-roadmap";
+    gap: .75rem;
+}
+
+.lesson-content {
+    grid-area: lesson-content;
+    /*border: 1px solid red;*/
+}
+
+.lesson-roadmap {
+    grid-area: lesson-roadmap;
+    /*border: 1px dashed blue;*/
+}
