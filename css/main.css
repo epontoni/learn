@@ -3,6 +3,7 @@
 @import './menu.css';
 @import './app-content.css';
 @import './lesson.css';
+@import './video-responsive.css';
 
 :root {
     --black: #000000; 
