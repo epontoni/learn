@@ -3,9 +3,9 @@
 .show-path {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    /*justify-content: space-around;*/
     align-items: center;
-    gap: .5rem;
+    /*gap: .5rem;*/
     min-height: 3rem; /**/
 }
 
@@ -13,6 +13,11 @@
     font-size: 1.5rem;
     cursor: pointer;
     margin-right: .5rem;
+    align-self: center;
+    justify-self: center;
+    min-width: 2rem; /**/
+    text-align: center;
+
 }
 
 .show-path i:hover {
@@ -21,9 +26,10 @@
 }
 
 .show-path p {
+    justify-self: right;
     margin: 0;
     transition: display 1s ease, width 1s ease; /* why doesn't work ?*/
-    
+    font-size: .75rem;    
 }
 
 .switchable.is-visible {
@@ -32,7 +38,7 @@
 
 .lesson-list {
     /*border: 1px solid tomato;*/
-    max-height: calc(100vh - 8rem);
+    max-height: calc(100vh - 6rem);
     overflow-y: scroll;
 }
 
@@ -80,6 +86,20 @@
     justify-content: center;
     position: relative;
     margin-right: .5rem;
+}
+
+.title-dotContainer::before {
+    content: "";
+    width: 2px;
+    background: var(--primary);
+    height: 50%;
+    position: absolute;
+    left: calc(50% - 1px);
+    top: 0;
+}
+
+.clearBeforeDot::before {
+    content: none;
 }
 
 .title-dotContainer::after {
@@ -167,6 +187,6 @@ a.lesson-chapterTitle:hover {
 
 @media (max-width: 768px) {
     .lesson-list {
-        max-height: calc(100vh - 11rem);
+        height: calc(100vh - 9rem);
     }
 }

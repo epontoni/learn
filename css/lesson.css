@@ -3,7 +3,7 @@
 .lesson {
     display: grid;
     grid-template-columns: 1fr auto;
-    height: 100%;
+    max-height: 100%;
     grid-template-areas: "lesson-content lesson-roadmap";
     gap: .75rem;
 }
@@ -16,4 +16,10 @@
 .lesson-roadmap {
     grid-area: lesson-roadmap;
     /*border: 1px dashed blue;*/
+}
+
+@media (max-width: 768px) {
+    .lesson {
+        height: calc(100vh - 3rem);
+    }
 }
